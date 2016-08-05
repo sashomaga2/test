@@ -1,0 +1,5 @@
+{
+  "registry": "http://bower.herokuapp.com",
+  "proxy":"http://amarinov:Alexander1020@ppwebsensebgr.inhouse.paddypower.com:8080/",
+  "https-proxy":"http://amarinov:Alexander1020@ppwebsensebgr.inhouse.paddypower.com:8080/"
+}

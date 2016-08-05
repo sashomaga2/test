@@ -1,11 +1,14 @@
-<!-- Main navigation -->
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                Citroen
-            </a>
-        </div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span ng-repeat="tab in data" class="icon-bar">{{tab}}</span>
+        </button>
+    </div>
+    <a class="navbar-brand" href="#">Citroen</a>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="tab in data"><a href="#{{tab}}">{{tab}}</a></li>
+        </ul>
     </div>
 </nav>
-<!--<div ng-repeat="tab in data">{{tab}}</div>-->
+

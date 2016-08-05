@@ -27,7 +27,6 @@
 
 		<!-- CSS -->
 		<!-- build:css css/style.min.css -->
-		<link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" />
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
 		<!-- endbuild -->
 
@@ -40,23 +39,23 @@
 		<![endif]-->
 
 		<!-- Navigation -->
-		<div ui-view="test1"></div>
+		<div ui-view="nav"></div>
 
 		<!-- Main view for templates -->
-		<div ui-view="test2" class="container"></div>
+		<div ui-view="main" class="container"></div>
 
 	</body>
 
 	<!-- Vendors -->
 	<!-- build:nonangularlibs js/nonangularlibs.js -->
 	<script type="text/javascript" src="js/nonangular/jquery-1.11.2.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<!-- endbuild -->
 
 	<!-- Non-angular libraries -->
 	<!-- build:libs js/libs.js -->
 	<script type="text/javascript" src="js/nonangular/lodash.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
 	<!-- endbuild -->
 
 	<!-- Angular external libraries for application -->

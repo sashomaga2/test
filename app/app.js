@@ -22,53 +22,29 @@
 
     $locationProvider.html5Mode(false);
 
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider.state('home', {
       url: '/',
       views: {
-        'test1': {
+        'nav': {
           template: '<main-nav data="data.Navigation"></main-nav>', //
           controller: 'MainController'
         },
-        'test2': {
+        'main': {
           templateUrl: 'views/home.html',
           controller: 'MainController'
         }
       },
       resolve: {
         data: function(getDataFromAPI) {
+          console.log('data');
           return getDataFromAPI.loadData();
         }
       }
     });
 
     // routes
-    //$routeProvider
-    //  .when('/', {
-    //    templateUrl: 'views/home.html',
-    //    controller: 'MainController',
-    //    controllerAs: 'main',
-    //    resolve: {
-    //      data: function(getDataFromAPI) {
-    //        return getDataFromAPI.loadData();
-    //      }
-    //    }
-    //  })
-    //  .when('/contact', {
-    //    templateUrl: 'views/contact.html',
-    //    controller: 'MainController',
-    //    controllerAs: 'main'
-    //  })
-    //  .when('/setup', {
-    //    templateUrl: 'views/setup.html',
-    //    controller: 'MainController',
-    //    controllerAs: 'main'
-    //  })
-    //  .otherwise({
-    //    redirectTo: '/'
-    //  });
-
     $httpProvider.interceptors.push('authInterceptor');
 
   }
