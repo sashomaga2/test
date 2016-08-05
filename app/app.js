@@ -37,9 +37,10 @@
         }
       },
       resolve: {
-        data: function(getDataFromAPI) {
-          console.log('data');
-          return getDataFromAPI.loadData();
+        data: function(QueryService) {
+          //return getDataFromAPI.loadData();
+          //TODO use QueryService
+          return QueryService.query('get', "").then(function(result) { return result.data; } );
         }
       }
     });
